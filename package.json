@@ -1,24 +1,19 @@
 {
   "name": "@mirum7/links-backend",
   "version": "0.0.1",
-  "description": "",
+  "description": "backend service to make short links",
   "author": "Edward Gryazev",
   "private": true,
   "license": "MIT",
   "scripts": {
     "prisma": "prisma format && prisma generate --no-hints --allow-no-models",
     "prepare": "husky && prisma generate --no-hints --allow-no-models",
-    "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "build": "webpack",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json"
+    "start:prod": "node dist/main"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
@@ -30,22 +25,24 @@
     "rxjs": "^7.8.1"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
-    "@eslint/js": "^9.18.0",
     "@nestjs/cli": "^11.0.0",
     "@nestjs/schematics": "^11.0.0",
     "@prisma/client": "^6.4.1",
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.11.7",
+    "@types/dotenv-webpack": "^7.0.8",
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.7",
     "@types/supertest": "^6.0.2",
     "class-validator": "^0.14.1",
+    "dotenv-webpack": "^8.1.0",
     "husky": "^9.1.7",
     "prettier": "^3.5.3",
     "prisma": "^6.4.1",
     "source-map-support": "^0.5.21",
+    "swc-loader": "^0.2.6",
     "tsconfig-paths": "^4.2.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "webpack-cli": "^6.0.1"
   }
 }

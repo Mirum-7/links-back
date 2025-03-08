@@ -25,6 +25,8 @@ services:
       - db
     networks:
       - links-network
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
 
 volumes:
   postgres_data:

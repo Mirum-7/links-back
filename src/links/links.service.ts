@@ -24,17 +24,13 @@ export class LinksService {
 
     const hash = this.generateHash();
 
-    const link = await this.prisma.links.create({
+    return await this.prisma.links.create({
       data: {
         target: createLinkDto.target,
         uriHash: hash,
         expiredAt,
       },
     });
-
-    console.log(link);
-
-    return link;
   }
 
   async delete(id: number) {
