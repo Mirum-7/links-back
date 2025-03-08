@@ -20,6 +20,4 @@ COPY --from=builder /usr/src/app/node_modules/.prisma/client/libquery_engine-*.n
 COPY --from=builder /usr/src/app/dist/main.js ./
 COPY --from=builder /usr/src/app/.env ./
 
-EXPOSE ${LINKS_PORT}
-
 ENTRYPOINT [ "node", "main" ]
