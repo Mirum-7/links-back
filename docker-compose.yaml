@@ -1,5 +1,5 @@
 services:
-  nest:
+  nest-kinks:
     container_name: links-back
     build:
       context: .
