@@ -14,7 +14,6 @@ services:
       - links-network
 
   links:
-    image: links-back
     container_name: links-back
     build:
       context: .
