@@ -14,8 +14,8 @@ services:
       - links-network
 
   links:
-    image: links
-    container_name: links
+    image: links-back
+    container_name: links-back
     build:
       context: .
       dockerfile: ./deploy/dockerfile
@@ -30,6 +30,7 @@ services:
 
 volumes:
   postgres_data:
+    driver: local
 
 networks:
   links-network:
