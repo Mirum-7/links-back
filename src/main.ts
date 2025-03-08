@@ -9,6 +9,12 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
 
   await app.listen(process.env.LINKS_PORT ?? 1200);
+
+  process.on('SIGTERM', async () => {
+    console.log('Received SIGTERM. Gracefully shutting down...');
+    await app.close();
+    process.exit(0);
+  });
 }
 bootstrap().catch((error) => {
   console.error(error.message);
