@@ -10,10 +10,8 @@
     "prepare": "husky && prisma generate --no-hints --allow-no-models",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "build": "webpack",
-    "start": "nest start",
-    "start:dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
-    "start:prod": "node dist/main"
+    "dev": "nest start --watch",
+    "debug": "nest start --debug --watch"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.1",
