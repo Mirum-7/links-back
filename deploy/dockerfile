@@ -14,7 +14,6 @@ FROM node:20-alpine
 
 WORKDIR /usr/src/app
 
-
 ARG cache=14
 COPY --from=builder /usr/src/app/node_modules/.prisma/client/libquery_engine-*.node node_modules/.prisma/client/
 COPY --from=builder /usr/src/app/dist/main.js ./
