@@ -10,4 +10,7 @@ async function bootstrap() {
 
   await app.listen(process.env.LINKS_PORT ?? 1200);
 }
-bootstrap();
+bootstrap().catch((error) => {
+  console.error(error.message);
+  process.exit(1);
+});
