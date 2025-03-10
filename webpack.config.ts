@@ -32,6 +32,7 @@ const config = {
           '@nestjs/websockets',
           '@nestjs/websockets/socket-module',
           '@nestjs/microservices/microservices-module',
+          'class-transformer/storage',
         ];
 
         if (!lazyImports.includes(resource)) {
