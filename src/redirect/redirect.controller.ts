@@ -2,7 +2,7 @@ import { Controller, Get, Param, Res } from '@nestjs/common';
 import { Response } from 'express';
 import { LinksService } from '../links/links.service';
 
-@Controller('/')
+@Controller('/s')
 export class RedirectController {
   constructor(private readonly linksService: LinksService) {}
 
